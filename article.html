@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Article</title></head>
+<body>
+<iframe id="frame" width="100%" height="800"></iframe>
+<script>
+const url=new URLSearchParams(location.search).get("url");
+document.getElementById("frame").src=url;
+</script>
+</body></html>
