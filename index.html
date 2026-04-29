@@ -3,24 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THB THAILAND | ข่าวหนังระดับพรีเมียม</title>
-<link rel="stylesheet" href="style.css">
+
+<title>THB THAILAND โปรแกรมหนัง | ข้อมูลภาพยนตร์</title>
+<meta name="description" content="เว็บไซต์ข้อมูลภาพยนตร์ใหม่ รีวิวหนัง ตารางฉาย และข่าวสารหนังล่าสุด">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: #0f0f0f;
+  color: #fff;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #00bcd4;
+}
+
+.header h1 {
+  font-size: 22px;
+  color: #00e5ff;
+}
+
+.header p {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  overflow-x: auto;
+  background: #111;
+  padding: 10px;
+  gap: 10px;
+}
+
+.nav button {
+  background: #1f1f1f;
+  border: none;
+  color: #ccc;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background: #00bcd4;
+  color: #000;
+}
+
+/* FILTER */
+.filter {
+  background: #1a1a1a;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.filter select {
+  padding: 8px;
+  background: #111;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+/* SECTION TITLE */
+.section-title {
+  margin: 15px;
+  padding: 10px;
+  background: #111;
+  border-left: 5px solid #00bcd4;
+  font-weight: bold;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.card {
+  background: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 10px;
+}
+
+.card h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.meta {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.rating {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.rating span {
+  color: #00e676;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #777;
+  font-size: 12px;
+}
+</style>
+
 </head>
 <body>
-<script src='https://buffcasualwhine.com/iFXF2/SsA7jfavPZhBV0GJ4/X7ZDeXR/-ETVe4NOdFDAk9hyN/9SkUDqnt/miOC3wPKmsbRKS/NVa/9yJ/Uq-IJiAL74RfanQY/5cXwJWLqux/xNvWH5WCSj6eiB/k7Yyh19HxNj'></script>
-<header class="header">
-<div class="logo">THB THAILAND</div>
-</header>
-<div class="ad"></div>
-<main class="container">
-<section class="main-content">
-<div id="hero" class="hero">Loading...</div>
-<div id="news-grid" class="grid"></div>
-</section>
-<aside class="sidebar">
-<ul id="trending"></ul>
-</aside>
-</main>
-<script src="script.js"></script>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>THB THAILAND | โปรแกรมหนัง เช็ครอบหนัง</h1>
+  <p>ข้อมูลภาพยนตร์ | รีวิว | ตารางฉาย</p>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button>หนังเข้าใหม่</button>
+  <button>ตารางฉาย</button>
+  <button>รีวิวหนัง</button>
+  <button>อันดับหนัง</button>
+  <button>ข่าวภาพยนตร์</button>
+</div>
+
+<!-- FILTER -->
+<div class="filter">
+  <label>ปี: </label>
+  <select>
+    <option>2026</option>
+    <option>2025</option>
+  </select>
+
+  <label>เดือน: </label>
+  <select>
+    <option>มกราคม</option>
+    <option>กุมภาพันธ์</option>
+    <option>มีนาคม</option>
+  </select>
+</div>
+
+<!-- SECTION -->
+<div class="section-title">🎬 หนังเข้าใหม่</div>
+
+<div class="grid">
+
+  <!-- CARD -->
+  <div class="card">
+    <img src="https://via.placeholder.com/300x450">
+    <div class="info">
+      <h3>ชื่อภาพยนตร์ 1</h3>
+      <div class="meta">แอคชั่น | 2026</div>
+      <div class="rating">⭐ <span>8.5</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x450">
+    <div class="info">
+      <h3>ชื่อภาพยนตร์ 2</h3>
+      <div class="meta">ดราม่า | 2026</div>
+      <div class="rating">⭐ <span>7.9</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x450">
+    <div class="info">
+      <h3>ชื่อภาพยนตร์ 3</h3>
+      <div class="meta">แฟนตาซี | 2026</div>
+      <div class="rating">⭐ <span>9.1</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x450">
+    <div class="info">
+      <h3>ชื่อภาพยนตร์ 4</h3>
+      <div class="meta">สยองขวัญ | 2026</div>
+      <div class="rating">⭐ <span>6.8</span></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300x450">
+    <div class="info">
+      <h3>ชื่อภาพยนตร์ 5</h3>
+      <div class="meta">โรแมนติก | 2026</div>
+      <div class="rating">⭐ <span>8.2</span></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  © 2026 เว็บไซต์ข้อมูลภาพยนตร์ | ไม่ใช่เว็บดูหนังออนไลน์
+</div>
+
 </body>
 </html>
